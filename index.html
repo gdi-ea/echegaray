@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caleb Echegaray - Consultor Estratégico Territorial | Especialista SIG</title>
+    <title>Ing. R. Caleb Echegaray, MSc. | Consultor Estratégico PDOT | Especialista SIG FOSS4G</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* --- VARIABLES Y RESET --- */
+        /* --- VARIABLES DE COLOR (Negro, Verde Oscuro, Naranja, Amarillo) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary-navy: #1a2a44; --accent-blue: #007bff;
-            --accent-gold: #f4a261; --accent-gold-dark: #e76f51;
-            --light-gray: #f8f9fa; --white: #ffffff;
-            --text-dark: #2c3e50; --text-light: #6c757d;
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-            --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+            --primary-black: #141414; 
+            --primary-green: #1b4332; 
+            --accent-orange: #f26419; 
+            --accent-yellow: #f6ae2d; 
+            --light-bg: #f4f6f5; 
+            --white: #ffffff;
+            --text-dark: #2c3e50; 
+            --text-light: #6c757d;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 20px 40px rgba(242, 100, 25, 0.15);
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-dark); overflow-x: hidden; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-dark); overflow-x: hidden; background-color: var(--light-bg); }
         html { scroll-behavior: smooth; }
 
         /* --- CABECERA Y NAVEGACIÓN --- */
-        header { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        header { position: fixed; top: 0; width: 100%; background: rgba(20, 20, 20, 0.95); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.3); transition: all 0.3s ease; }
         nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; max-width: 1400px; margin: 0 auto; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-navy); text-decoration: none; }
+        .logo { font-size: 1.3rem; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: 1px; }
+        .logo span { color: var(--accent-orange); }
         .nav-menu { display: flex; list-style: none; gap: 2rem; }
-        .nav-menu a { text-decoration: none; color: var(--text-dark); font-weight: 600; position: relative; transition: color 0.3s; }
-        .nav-menu a:hover { color: var(--accent-blue); }
-        .nav-menu a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent-blue); transition: width 0.3s; }
+        .nav-menu a { text-decoration: none; color: var(--white); font-weight: 600; position: relative; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-menu a:hover { color: var(--accent-yellow); }
+        .nav-menu a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent-orange); transition: width 0.3s; }
         .nav-menu a:hover::after { width: 100%; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
-        .hamburger span { width: 25px; height: 3px; background: var(--primary-navy); transition: 0.3s; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 30px; height: 3px; background: var(--white); transition: 0.3s; }
 
-        /* --- SECCIÓN HERO (INICIO) --- */
-        #hero { height: 100vh; background: linear-gradient(135deg, var(--primary-navy) 0%, #2c5282 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; overflow: hidden; }
-        .hero-content { max-width: 800px; padding: 0 2rem; z-index: 2; animation: fadeInUp 1s ease; }
-        .hero-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 1rem; color: var(--accent-gold); }
-        .hero-subtitle { font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.95; line-height: 1.8; }
+        /* --- SECCIÓN HERO (ENFOQUE PDOT Y GERENCIAL) --- */
+        #hero { height: 100vh; background: linear-gradient(rgba(20,20,20,0.8), rgba(27,67,50,0.85)), url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; }
+        .hero-content { max-width: 900px; padding: 0 2rem; z-index: 2; animation: fadeInUp 1s ease; }
+        .hero-pretitle { color: var(--accent-yellow); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+        .hero-title { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.1; }
+        .hero-subtitle { font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.95; line-height: 1.8; font-weight: 300; }
+        .hero-subtitle strong { color: var(--accent-yellow); font-weight: 600; }
         .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-        .btn { padding: 1rem 2.5rem; border: none; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s ease; cursor: pointer; font-size: 1rem; }
-        .btn-primary { background: var(--accent-gold); color: var(--primary-navy); box-shadow: var(--shadow); }
-        .btn-primary:hover { background: var(--accent-gold-dark); transform: translateY(-3px); box-shadow: var(--shadow-hover); color: white;}
-        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
-        .btn-secondary:hover { background: white; color: var(--primary-navy); transform: translateY(-3px); }
+        .btn { padding: 1rem 2.5rem; border: none; border-radius: 5px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s ease; cursor: pointer; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;}
+        .btn-primary { background: var(--accent-orange); color: white; box-shadow: 0 5px 15px rgba(242, 100, 25, 0.4); }
+        .btn-primary:hover { background: #d95611; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(242, 100, 25, 0.6); color: white;}
+        .btn-secondary { background: transparent; color: white; border: 2px solid var(--accent-yellow); }
+        .btn-secondary:hover { background: var(--accent-yellow); color: var(--primary-black); transform: translateY(-3px); }
 
         /* --- ESTILOS GENERALES DE SECCIONES --- */
         section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
@@ -49,62 +56,69 @@
         .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        /* --- SERVICIOS ESTRELLA --- */
-        #servicios { background: linear-gradient(135deg, var(--light-gray) 0%, white 100%); max-width: 100%; }
-        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; max-width: 1000px; margin: 0 auto; }
-        .servicio-card { background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--shadow); transition: all 0.4s ease; border-top: 5px solid transparent; text-align: center;}
-        .servicio-card:nth-child(1) { border-top-color: var(--accent-gold); }
-        .servicio-card:nth-child(2) { border-top-color: var(--accent-blue); }
-        .servicio-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
-        .servicio-icon { font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--accent-blue); }
-        .servicio-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-navy); }
+        /* --- SERVICIOS CON FOTOS ILUSTRATIVAS --- */
+        #servicios { max-width: 100%; background: white;}
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto; }
+        .servicio-card { background: white; border-radius: 10px; box-shadow: var(--shadow); transition: all 0.4s ease; overflow: hidden; border-bottom: 4px solid var(--primary-green); display: flex; flex-direction: column;}
+        .servicio-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); border-bottom-color: var(--accent-orange); }
+        .servicio-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 4px solid var(--accent-yellow); transition: transform 0.5s ease;}
+        .servicio-card:hover .servicio-img { transform: scale(1.05); }
+        .servicio-img-wrapper { overflow: hidden; }
+        .servicio-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;}
+        .servicio-content h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-navy); }
+        .servicio-content p { color: var(--text-light); font-size: 1rem; line-height: 1.7; }
 
-        /* --- SOBRE MÍ --- */
-        #sobre { background: white; }
-        .sobre-content { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.9; }
+        /* --- SOBRE MÍ (COPYWRITING PERSUASIVO) --- */
+        #sobre { background: var(--primary-green); color: white; max-width: 100%; }
+        #sobre .section-title { color: white; }
+        .sobre-content { max-width: 900px; margin: 0 auto; text-align: center; font-size: 1.2rem; line-height: 2; font-weight: 300;}
+        .sobre-content strong { color: var(--accent-yellow); font-weight: 600;}
 
-        /* --- EXPERIENCIA (TIMELINE) --- */
-        #experiencia { background: var(--light-gray); max-width: 100%; }
+        /* --- EXPERIENCIA (TIMELINE DESCENDENTE) --- */
+        #experiencia { background: var(--light-bg); max-width: 100%; }
         .timeline { max-width: 800px; margin: 0 auto; position: relative; }
-        .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 3px; height: 100%; background: var(--accent-blue); }
+        .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background: rgba(27,67,50,0.2); }
         .timeline-item { display: flex; margin-bottom: 3rem; position: relative; }
         .timeline-item:nth-child(odd) { justify-content: flex-end; }
-        .timeline-content { width: 45%; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); position: relative; }
+        .timeline-content { width: 45%; background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow); position: relative; border-top: 4px solid var(--primary-navy); }
         .timeline-item:nth-child(odd) .timeline-content { margin-right: 50%; }
         .timeline-item:nth-child(even) .timeline-content { margin-left: 50%; }
-        .timeline-dot { position: absolute; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: var(--accent-gold); border-radius: 50%; box-shadow: 0 0 0 4px white; z-index: 2; }
-        .timeline-date { color: var(--accent-blue); font-weight: 700; margin-bottom: 0.5rem; }
+        .timeline-dot { position: absolute; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background: var(--accent-yellow); border-radius: 50%; box-shadow: 0 0 0 5px var(--light-bg); z-index: 2; transition: all 0.3s; }
+        .timeline-item:hover .timeline-dot { background: var(--accent-orange); transform: translateX(-50%) scale(1.2); }
+        .timeline-date { color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem; display: block;}
+        .timeline-content h3 { color: var(--primary-navy); margin-bottom: 5px; font-size: 1.2rem;}
+        .timeline-content p { color: var(--text-light); font-size: 0.95rem; font-weight: 600;}
 
-        /* --- EDUCACIÓN --- */
-        .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .edu-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow); text-align: center; border-bottom: 4px solid var(--accent-blue); }
+        /* --- FORMACIÓN Y HERRAMIENTAS --- */
+        .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;}
+        .edu-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow); text-align: center; border-left: 5px solid var(--accent-blue); }
         .edu-card h3 { color: var(--primary-navy); margin-bottom: 10px; }
-
-        /* --- HABILIDADES CON ICONOS --- */
-        #habilidades { background: var(--light-gray); max-width: 100%; }
-        .habilidades-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto; justify-items: center; }
+        .edu-card p { color: var(--text-light); }
+        
+        .habilidades-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; justify-items: center; }
         .habilidad-card { background: white; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding: 1rem; border-radius: 15px; box-shadow: var(--shadow); transition: all 0.3s ease; text-align: center; border-bottom: 3px solid transparent; }
         .habilidad-card i { font-size: 3rem; color: var(--primary-navy); transition: transform 0.3s ease; }
         .habilidad-card span { font-weight: 600; color: var(--primary-navy); font-size: 0.85rem; }
         .habilidad-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); border-bottom-color: var(--accent-gold); }
         .habilidad-card:hover i { transform: scale(1.1); color: var(--accent-blue); }
-
+        
         /* --- FOOTER / CONTACTO --- */
-        #contacto { background: var(--primary-navy); color: white; text-align: center; padding: 80px 5% 40px; max-width: 100%; }
-        .contacto-final { font-size: 1.8rem; margin-bottom: 2rem; color: var(--accent-gold); }
+        #contacto { background: var(--primary-navy); color: white; text-align: center; padding: 80px 5% 40px; max-width: 100%; border-top: 5px solid var(--accent-gold);}
+        .contacto-final { font-size: 2rem; margin-bottom: 2rem; font-weight: bold; color: var(--accent-gold); }
         .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 3rem 0; }
-        .contact-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 2rem; background: rgba(255,255,255,0.05); border-radius: 10px; }
+        .contact-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 2rem; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);}
         .contact-item i { font-size: 1.5rem; color: var(--accent-gold); }
         .social-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
-        .social-links a { color: white; font-size: 2rem; transition: color 0.3s ease; }
-        .social-links a:hover { color: var(--accent-gold); }
+        .social-links a { color: var(--white); font-size: 2rem; transition: all 0.3s ease; }
+        .social-links a:hover { color: var(--accent-gold); transform: translateY(-5px);}
 
-        /* --- RESPONSIVE (MÓVILES) --- */
+        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .hamburger { display: flex; }
-            .nav-menu { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: white; flex-direction: column; padding: 2rem 0; text-align: center; box-shadow: 0 10px 10px rgba(0,0,0,0.1); }
+            .nav-menu { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: var(--primary-navy); flex-direction: column; padding: 2rem 0; text-align: center; box-shadow: 0 10px 10px rgba(0,0,0,0.5); }
             .nav-menu.active { display: flex; }
             .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; }
             .timeline::before { left: 20px; }
             .timeline-item { flex-direction: column !important; margin-bottom: 2rem; }
             .timeline-content { width: calc(100% - 50px) !important; margin: 0 0 0 50px !important; }
@@ -119,12 +133,12 @@
 
     <header>
         <nav>
-            <a href="#hero" class="logo">Caleb Echegaray</a>
+            <a href="#hero" class="logo">Ing. Caleb Echegaray, MSc<span>.</span></a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#hero">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacion">Habilidades</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -135,94 +149,159 @@
 
     <section id="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Caleb Echegaray</h1>
+            <span class="hero-pretitle">Planificación Estratégica & SIG</span>
+            <h1 class="hero-title">Ing. R. Caleb Echegaray, MSc.</h1>
             <p class="hero-subtitle">
-                Consultor Estratégico Territorial | Especialista SIG<br><br>
-                <strong>"Transformo datos espaciales en decisiones rentables para negocios (Geomarketing) y en planificación inteligente para ciudades (PDOT)."</strong>
+                Transformo datos espaciales en decisiones de alto impacto. Consultor Especialista en <strong>Desarrollo de PDOT</strong>, Ordenamiento Territorial, Geomarketing, Topografía y Ortofotos de Precisión.
             </p>
             <div class="cta-buttons">
-                <a href="#servicios" class="btn btn-primary">Mis Servicios</a>
-                <a href="#contacto" class="btn btn-secondary">Agendar Consultoría</a>
+                <a href="https://wa.me/593996746444" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Agendar Consultoría</a>
+                <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
             </div>
         </div>
     </section>
 
     <section id="servicios" class="fade-in">
-        <h2 class="section-title">Servicios Estrella</h2>
+        <h2 class="section-title">Servicios Profesionales</h2>
         <div class="servicios-grid">
+            
             <div class="servicio-card">
-                <i class="fas fa-map-marked-alt servicio-icon"></i>
-                <h3>Consultoría en Geomarketing</h3>
-                <p>Optimiza la rentabilidad de tu negocio mediante Inteligencia de Ubicación. Identificación de zonas calientes, análisis de competencia, segmentación de mercado geoespacial y optimización de rutas.</p>
+                <div class="servicio-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80" alt="Desarrollo de PDOT" class="servicio-img">
+                </div>
+                <div class="servicio-content">
+                    <h3>Desarrollo y Actualización PDOT</h3>
+                    <p>Asistencia técnica integral para GADs. Formulación y actualización de Planes de Ordenamiento Territorial, cartografía temática detallada y estructuración de bases de datos espaciales para la gestión pública moderna.</p>
+                </div>
             </div>
+
             <div class="servicio-card">
-                <i class="fas fa-city servicio-icon"></i>
-                <h3>Desarrollo y Actualización PDOT</h3>
-                <p>Asistencia técnica integral para GADs. Formulación de Planes de Ordenamiento Territorial, cartografía temática, análisis de riesgos y estructuración de bases de datos espaciales.</p>
+                <div class="servicio-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Geomarketing" class="servicio-img">
+                </div>
+                <div class="servicio-content">
+                    <h3>Consultoría en Geomarketing</h3>
+                    <p>Optimiza la rentabilidad de tu negocio mediante Inteligencia de Ubicación. Identificación de zonas de calor, análisis de competencia geoespacial, segmentación de mercado y optimización logística de rutas de distribución.</p>
+                </div>
             </div>
+
+            <div class="servicio-card">
+                <div class="servicio-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80" alt="Topografía de Precisión RTK" class="servicio-img">
+                </div>
+                <div class="servicio-content">
+                    <h3>Topografía de Precisión (RTK)</h3>
+                    <p>Levantamientos topográficos de alta exactitud utilizando equipos GNSS RTK y Estación Total. Garantizamos precisión milimétrica para proyectos de infraestructura, catastro, lotizaciones y obras civiles complejas.</p>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80" alt="Ortofotos y Modelos 3D Drones" class="servicio-img">
+                </div>
+                <div class="servicio-content">
+                    <h3>Ortofotos y Modelos 3D Advanced</h3>
+                    <p>Generación de ortofotos de alta resolución, Modelos Digitales de Elevación (MDE/MDT) y nubes de puntos 3D mediante fotogrametría avanzada y planificación de vuelos con drones (Piloto DGAC).</p>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Implementación de Geoportales Institucionales" class="servicio-img">
+                </div>
+                <div class="servicio-content">
+                    <h3>Implementación de Geoportales</h3>
+                    <p>Desarrollo y mantenimiento de geoportales institucionales personalizados. Visualización avanzada de datos, consultas interactivas, interoperabilidad OGC y servicios WMS/WFS para un acceso transparente a la información geoespacial.</p>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Automatización de Procesos SIG FOSS4G" class="servicio-img">
+                </div>
+                <div class="servicio-content">
+                    <h3>Automatización de Procesos SIG</h3>
+                    <p>Optimización de flujos de trabajo geoespaciales mediante scripting (Python) y Spatial SQL (PostGIS). Automatización de levantamientos de campo, procesado de imágenes, modelado espacial y generación de reportes automáticos.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section id="sobre" class="fade-in">
-        <h2 class="section-title">Sobre Mí</h2>
+        <h2 class="section-title">Perfil Profesional</h2>
         <div class="sobre-content">
-            <p>Ingeniero Geógrafo, Máster en Geomática y en Ciudad y Urbanismo. Mi enfoque en la excelencia me permite impulsar proyectos con responsabilidad y visión proactiva. Aporto a las instituciones y empresas mi capacidad de liderazgo, generando soluciones eficientes ante desafíos territoriales y comerciales mediante el análisis avanzado de datos.</p>
+            <p>Más que un ingeniero, soy un <strong>estratega del territorio</strong>. Como Ingeniero Geógrafo y Ambiente, Máster en Geomática y en Ciudad y Urbanismo, me dedico a transformar datos espaciales complejos en <strong>soluciones claras, rentables y sostenibles</strong>.</p>
+            <br>
+            <p>Ya sea estructurando el ordenamiento territorial (PDOT) de un cantón entero para optimizar la inversión pública, o aplicando geomarketing para asegurar el éxito comercial de una empresa, mi enfoque siempre está en la excelencia y los resultados. Combino mi capacidad de liderazgo y gestión de proyectos con un dominio técnico profundo en bases de datos espaciales, teledetección y programación, asegurando que cada proyecto no solo cumpla con la normativa, sino que <strong>genere valor real y medible</strong>.</p>
         </div>
     </section>
 
     <section id="experiencia" class="fade-in">
-        <h2 class="section-title">Experiencia Destacada</h2>
+        <h2 class="section-title">Trayectoria Destacada</h2>
         <div class="timeline">
+            
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">Docente Invitado</div>
-                    <h3>Universidad Técnica de Manabí</h3>
-                    <p>Módulo: Base de Datos Espaciales</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">2025 - Actual</div>
+                    <span class="timeline-date">2025 - Actual</span>
                     <h3>Especialista de Territorio</h3>
                     <p>Prefectura de Los Ríos GADPLR</p>
                 </div>
             </div>
+
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">2025</div>
-                    <h3>Asistente de Cartografía II</h3>
-                    <p>Instituto Geográfico Militar - IGM</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">2024 - 2025</div>
+                    <span class="timeline-date">2024 - 2025</span>
                     <h3>Especialista de datos GIS</h3>
                     <p>Observatorio Estadístico - AEBE</p>
                 </div>
             </div>
+
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">2023 - 2024</div>
-                    <h3>Consultor Senior GIS</h3>
-                    <p>CPET S.A.S.</p>
+                    <span class="timeline-date">Actualidad / Reciente</span>
+                    <h3>Docente Invitado</h3>
+                    <p>Universidad Técnica de Manabí</p>
                 </div>
             </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023 - 2024</span>
+                    <h3>Consultor Senior GIS</h3>
+                    <p>CPET Cia. Ltda.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2022 - 2023</span>
+                    <h3>Consultor Senior GIS</h3>
+                    <p>Equisercon Cia. Ltda.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2019 - 2022</span>
+                    <h3>Coordinador de Proyectos</h3>
+                    <p>Chariot Entertaiment S.A.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section id="educacion" class="fade-in">
-        <h2 class="section-title">Formación Académica</h2>
+    <section id="formacion" class="fade-in" style="background: white;">
+        <h2 class="section-title">Formación Académica & FOSS4G</h2>
+        
         <div class="edu-grid">
-            <div class="edu-card">
-                <h3>Maestría en Geomática</h3>
-                <p>En curso / Completado</p>
-            </div>
             <div class="edu-card">
                 <h3>Máster en Ciudad y Urbanismo</h3>
                 <p>Universitat Oberta de Catalunya (2019-2021)</p>
@@ -232,50 +311,28 @@
                 <p>Universidad de las Fuerzas Armadas ESPE (2011-2017)</p>
             </div>
         </div>
-    </section>
 
-    <section id="habilidades" class="fade-in">
-        <h2 class="section-title">Habilidades y Herramientas</h2>
         <div class="habilidades-grid">
-            <div class="habilidad-card">
-                <i class="fas fa-layer-group"></i>
-                <span>Sistemas SIG (QGIS/ArcGIS)</span>
-            </div>
-            <div class="habilidad-card">
-                <i class="fab fa-python"></i>
-                <span>Python / Automatización</span>
-            </div>
-            <div class="habilidad-card">
-                <i class="fas fa-database"></i>
-                <span>Bases de Datos Espaciales</span>
-            </div>
-            <div class="habilidad-card">
-                <i class="fas fa-satellite"></i>
-                <span>Teledetección</span>
-            </div>
-            <div class="habilidad-card">
-                <i class="fas fa-helicopter"></i>
-                <span>Piloto de Drones DGAC</span>
-            </div>
-            <div class="habilidad-card">
-                <i class="fas fa-project-diagram"></i>
-                <span>Gestión de Proyectos</span>
-            </div>
-            <div class="habilidad-card">
-                <i class="fas fa-chart-pie"></i>
-                <span>Geomarketing</span>
-            </div>
-            <div class="habilidad-card">
-                <i class="fas fa-users"></i>
-                <span>Liderazgo</span>
-            </div>
+            <div class="habilidad-card"><i class="fas fa-layer-group"></i><span>QGIS / ArcGIS</span></div>
+            <div class="habilidad-card"><i class="fab fa-python"></i><span>Python SIG</span></div>
+            <div class="habilidad-card"><i class="fas fa-database"></i><span>PostGIS / SQL</span></div>
+            <div class="habilidad-card"><i class="fas fa-satellite"></i><span>Teledetección</span></div>
+            <div class="habilidad-card"><i class="fas fa-helicopter"></i><span>Drones DGAC</span></div>
+            <div class="habilidad-card"><i class="fas fa-map-marked-alt"></i><span>Topografía RTK</span></div>
+            <div class="habilidad-card"><i class="fas fa-city"></i><span>PDOT / Urbanismo</span></div>
+            <div class="habilidad-card"><i class="fas fa-project-diagram"></i><span>Proyectos</span></div>
+            
+            <div class="habilidad-card"><i class="fas fa-mobile-alt"></i><span>ODK Levantamiento</span></div>
+            <div class="habilidad-card"><i class="fas fa-gears"></i><span>GDAL/OGR Data</span></div>
+            <div class="habilidad-card"><i class="fas fa-server"></i><span>GeoServer Map</span></div>
+            <div class="habilidad-card"><i class="fas fa-code-branch"></i><span>Git SIG Autom.</span></div>
         </div>
     </section>
 
     <footer id="contacto">
         <div class="contacto-content">
-            <h2 class="contacto-final">¿Tienes un proyecto en mente?</h2>
-            <p>Hablemos de cómo los datos espaciales pueden generar rentabilidad y eficiencia para tu organización.</p>
+            <h2 class="contacto-final">¿Listo para transformar su territorio?</h2>
+            <p style="margin-bottom: 2rem;">Asesoría estratégica en PDOT, datos espaciales y soluciones FOSS4G.</p>
             
             <div class="contact-info">
                 <div class="contact-item">
@@ -283,8 +340,8 @@
                     <span>Ecuador (Pichincha / Los Ríos)</span>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+593 99-674-6444</span>
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/593996746444" target="_blank" style="color: white; text-decoration: none;">+593 99-674-6444</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -294,11 +351,11 @@
 
             <div class="social-links">
                 <a href="https://wa.me/593996746444" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                <a href="https://www.linkedin.com/in/rcea08021/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.researchgate.net/profile/Caleb-Echegaray?ev=hdr_xprf" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
             </div>
         </div>
-        <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">&copy; 2026 R. Caleb Echegaray. Todos los derechos reservados.</p>
+        <p style="margin-top: 3rem; color: #777; font-size: 0.9rem;">&copy; 2026 Ing. Caleb Echegaray, MSc. Todos los derechos reservados.</p>
     </footer>
 
     <script>
